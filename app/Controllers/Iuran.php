@@ -11,7 +11,6 @@ class Iuran extends Controller
         $model = new Iuran_model;
         $data['title'] = 'Data Iuran';
         $data['getIuran'] = $model->getIuran();
-        $data['sum'] = $this->Iuran_model->sumIuran();
         echo view('header_view', $data);
         echo view('iuran/iuran_view', $data);
         echo view('footer_view', $data);
