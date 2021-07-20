@@ -44,21 +44,4 @@ class Iuran extends Controller
             </script>';
 
     }
-
-    public function laporan()
-    {
-        $model = new Iuran_model;
-        $data['title'] = 'Laporan Data Iuran';
-        $data['total'] = $this->$model->sumIuran()->result();
-        echo view('header_view', $data);
-        echo view('iuran/laporan_view', $data);
-        echo view('footer_view', $data);
-    }
-
-    public function laporan1(){
-		$data['jumlah'] = $this->Iuran_model->sumIuran()->result();
-		$this->load->view('view_bongkarbarangsum', $data);
-
-	}
-
 }

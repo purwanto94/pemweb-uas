@@ -6,14 +6,22 @@ class Laporan_model extends Model
 {
     protected $table = 'iuran';
 
-    public function getLaporan1()
+    public function getLaporanTahun()
     {
-        return $this->db->query("SELECT sum(jumlah) AS total_jumlah from iuran");
+        $builder = $this->db->query('(SELECT tahun, SUM(jumlah) FROM iuran GROUP BY tahun)', false);
+        return $builder->getResultArray();
     }
 
-    public function getLaporan()
+    public function getListBulan()
     {
-        $builder = $this->db->query('(SELECT SUM(jumlah) FROM iuran AS total)', false);
-        return $builder->get();
+        $builder = $this->db->query('(SELECT DISTINCT bulan FROM iuran)', false);
+        return $builder->getResultArray();
     }
+
+    public function getListTahun()
+    {
+        $builder = $this->db->query('(SELECT DISTINCT tahun FROM iuran)', false);
+        return $builder->getResultArray();
+    }
+
 }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Waktu pembuatan: 18 Jul 2021 pada 17.56
+-- Waktu pembuatan: 20 Jul 2021 pada 06.21
 -- Versi server: 10.4.17-MariaDB
 -- Versi PHP: 7.4.13
 
@@ -42,13 +42,16 @@ CREATE TABLE `iuran` (
 --
 
 INSERT INTO `iuran` (`id`, `keterangan`, `tanggal`, `bulan`, `tahun`, `jumlah`, `warga_nik`) VALUES
-(2, 'Iuran bulanan', '2021-07-13', 7, 2020, '20000.00', '3000123276541234'),
-(3, 'Iuran bulanan', '2021-07-13', 7, 2021, '20000.00', '3000213487652314'),
-(4, 'Iuran bulanan', '2021-07-14', 6, 2021, '20000.00', '3000231476239087'),
-(5, 'Iuran bulanan', '2021-07-14', 6, 2021, '20000.00', '3000231237623100'),
-(6, 'Iuran bulanan', '2021-07-12', 5, 2021, '20000.00', '3000123187653124'),
-(7, 'Iuran bulanan', '2021-07-13', 5, 2021, '20000.00', '3000123187653124'),
-(8, 'Iuran bulanan', '2020-01-08', 1, 2021, '20000.00', '3000231476239087');
+(9, 'Kas bulanan', '2020-01-05', 1, 2020, '50000.00', '3000123276541234'),
+(10, 'Kas bulanan', '2020-01-07', 1, 2020, '50000.00', '3000213487652314'),
+(11, 'Kas bulanan', '2020-01-08', 1, 2020, '50000.00', '3000231476239087'),
+(13, 'Kas bulanan', '2020-02-04', 2, 2020, '50000.00', '3000123187653124'),
+(14, 'Kas bulanan', '2021-02-12', 2, 2020, '50000.00', '3000213487652314'),
+(15, 'Kas bulanan', '2020-03-05', 3, 2020, '50000.00', '3000231476239087'),
+(16, 'Kas bulanan', '2020-03-17', 3, 2020, '50000.00', '3000231237623100'),
+(17, 'Kas bulanan', '2021-01-06', 1, 2021, '50000.00', '3000123276541234'),
+(18, 'Kas bulanan', '2021-01-12', 1, 2021, '50000.00', '3000213487652314'),
+(19, 'Kas bulanan', '2021-01-12', 1, 2021, '50000.00', '3000231476239087');
 
 -- --------------------------------------------------------
 
@@ -102,7 +105,7 @@ ALTER TABLE `warga`
 -- AUTO_INCREMENT untuk tabel `iuran`
 --
 ALTER TABLE `iuran`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT untuk tabel `warga`
